@@ -89,7 +89,7 @@ int main(int argc,char** argv)
                     printf("byebye");
                     fflush(stdin);
                     event.data.fd=new_fd;
-                    ret=epoll_ctl(epfd,EPOLL_CTL_DEL,socketfd,&event);
+                    ret=epoll_ctl(epfd,EPOLL_CTL_DEL,new_fd,&event);
                     if(ret==-1)
                     {
                         perror("epoll_ctl13");
